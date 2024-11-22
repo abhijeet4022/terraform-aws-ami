@@ -57,8 +57,8 @@ resource "null_resource" "provisioner" {
 
 # Create an AMI from the instance
 resource "aws_ami_from_instance" "ami" {
-  depends_on = [null_resource.provisioner]
-  name       = "roboshop-ami-v1"
-  source_instance_id = "aws_instance.ec2.id"
-  tags       = { Name = "roboshop-ami-v1" }
+  depends_on         = [null_resource.provisioner]
+  name               = "roboshop-ami-v1"
+  source_instance_id = aws_instance.ec2.id
+  tags               = { Name = "roboshop-ami-v1" }
 }
