@@ -50,7 +50,11 @@ resource "null_resource" "provisioner" {
       "sudo yum install epel-release -y &>> /tmp/userdata.log",
       "sudo yum install ansible python3.12-pip -y &>> /tmp/userdata.log",
       "sudo pip3.12 install botocore boto3 &>> /tmp/userdata.log",
-      "sudo yum install bash-completion -y &>> /tmp/userdata.log"
+      "sudo yum install bash-completion -y &>> /tmp/userdata.log",
+      "sudo dnf module disable nodejs -y",
+      "sudo dnf module enable nodejs:18 -y",
+      "sudo yum install nodejs -y",
+      "sudo yum install java-17-openjdk -y"
     ]
   }
 }
