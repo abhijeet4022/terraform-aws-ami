@@ -59,6 +59,6 @@ resource "null_resource" "provisioner" {
 resource "aws_ami_from_instance" "ami" {
   depends_on = [null_resource.provisioner]
   name       = "roboshop-ami-v1"
-  source_instance_id = "aws_instance.ami.id"
+  source_instance_id = "aws_instance.ec2.id"
   tags       = { Name = "roboshop-ami-v1" }
 }
