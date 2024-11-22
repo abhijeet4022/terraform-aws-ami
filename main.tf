@@ -54,7 +54,8 @@ resource "null_resource" "provisioner" {
       "sudo dnf module disable nodejs -y",
       "sudo dnf module enable nodejs:18 -y",
       "sudo yum install nodejs -y",
-      "sudo yum install java-17-openjdk -y"
+      "sudo yum install java-17-openjdk -y",
+      "sudo yum install python36 gcc python3-devel -y"
     ]
   }
 }
