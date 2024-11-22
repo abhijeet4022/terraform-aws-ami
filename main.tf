@@ -51,14 +51,14 @@ resource "null_resource" "provisioner" {
       "sudo yum install ansible python3.12-pip -y &>> /tmp/userdata.log",
       "sudo pip3.12 install botocore boto3 &>> /tmp/userdata.log",
       "sudo yum install bash-completion -y &>> /tmp/userdata.log",
-      "sudo dnf module disable nodejs -y",
-      "sudo dnf module enable nodejs:18 -y",
-      "sudo yum install nodejs -y",
-      "sudo dnf module disable maven -y",
-      "sudo dnf module enable maven:3.8 -y",
-      "sudo yum install java-17-openjdk maven -y",
-      "sudo yum install python36 gcc python3-devel -y",
-      "sudo yum install nginx -y"
+      "sudo dnf module disable nodejs -y &>> /tmp/userdata.log",
+      "sudo dnf module enable nodejs:18 -y &>> /tmp/userdata.log",
+      "sudo yum install nodejs -y &>> /tmp/userdata.log",
+      "sudo dnf module disable maven -y &>> /tmp/userdata.log",
+      "sudo dnf module enable maven:3.8 -y &>> /tmp/userdata.log",
+      "sudo yum install java-17-openjdk maven -y &>> /tmp/userdata.log",
+      "sudo yum install python36 gcc python3-devel -y &>> /tmp/userdata.log",
+      "sudo yum install nginx -y &>> /tmp/userdata.log"
     ]
   }
 }
