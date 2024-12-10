@@ -21,7 +21,7 @@ data "aws_ami" "ami" {
 
 # Fetch the security group
 data "aws_security_group" "sg" {
-  name = "allow-all"
+  name = "Allow-All"
 }
 
 # Create an EC2 instance
