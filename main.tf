@@ -1,7 +1,7 @@
 # Remote Backend
 terraform {
   backend "s3" {
-    bucket = "statefile.learntechnology.cloud"
+    bucket = "infrastatefile.learntechnology.cloud"
     key    = "ami/terraform.tfstate"
     region = "us-east-1"
   }
